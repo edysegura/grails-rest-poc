@@ -1,0 +1,51 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "A simpler POC with Grails to generate RESTful Web Services\n",
+    "version" : "0.2.0",
+    "title" : "GRAILS REST API POC"
+  },
+  "host" : "localhost:8080",
+  "schemes" : [ "http" ],
+  "consumes" : [ "application/json", "text/xml" ],
+  "produces" : [ "application/json", "application/xml" ],
+  "paths" : {
+    "/title" : {
+      "get" : {
+        "description" : "Gets `Title` objects.\n",
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "List all titles",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/Title"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "Title" : {
+      "properties" : {
+        "id" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "year" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "synopsis" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}
