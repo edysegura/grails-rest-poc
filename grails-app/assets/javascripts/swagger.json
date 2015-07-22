@@ -1,7 +1,7 @@
 {
     "swagger": "2.0",
     "info": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "title": "GRAILS REST API POC",
         "description": "A simpler POC with Grails to generate RESTful Web Services\n"
     },
@@ -20,7 +20,6 @@
     "paths": {
         "/titles": {
             "get": {
-                "summary": "Title",
                 "description": "Gets `Title` objects.\n",
                 "responses": {
                     "200": {
@@ -32,6 +31,91 @@
                                 "$ref": "#/definitions/Title"
                             }
                         }
+                    }
+                }
+            },
+            "post": {
+                "parameters": [
+                    {
+                        "name": "title",
+                        "in": "body",
+                        "description": "The title JSON you want to post",
+                        "schema": {
+                            "$ref": "#/definitions/Title"
+                        },
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Make a new title"
+                    }
+                }
+            }
+        },
+        "/titles/{id}": {
+            "get": {
+                "description": "Gets `Title` objects.\n",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "type": "string",
+                        "description": "ID of the title",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "List all titles",
+                        "schema": {
+                            "title": "Titles",
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Title"
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "type": "string",
+                        "description": "ID of the title",
+                        "required": true
+                    },
+                    {
+                        "name": "title",
+                        "in": "body",
+                        "description": "The title JSON you want to post",
+                        "schema": {
+                            "$ref": "#/definitions/Title"
+                        },
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Save a title"
+                    }
+                }
+            },
+            "delete": {
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "type": "string",
+                        "description": "ID of the title",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No response received"
                     }
                 }
             }
