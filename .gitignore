@@ -1,2 +1,4 @@
 .gradle
+.idea
+mdms-catalog-player.iml
 build
