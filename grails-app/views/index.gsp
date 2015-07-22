@@ -39,9 +39,9 @@
                 onFailure: function(data) {
                     log("Unable to Load SwaggerUI");
                 },
-                docExpansion: "none",
+                docExpansion: "list",
                 apisSorter: "alpha",
-                showRequestHeaders: false
+                showRequestHeaders: true
             });
 
             window.swaggerUi.load();
