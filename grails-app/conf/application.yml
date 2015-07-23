@@ -2,7 +2,7 @@
 grails:
     profile: web
     codegen:
-        defaultPackage: mdms.catalog.player
+        defaultPackage: br.edu.rest.grails.poc
 info:
     app:
         name: '@info.app.name@'

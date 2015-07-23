@@ -1,5 +1,5 @@
 import grails.converters.JSON
-import mdms.catalog.player.Title
+import br.edu.rest.grails.poc.Title
 
 class BootStrap {
 
