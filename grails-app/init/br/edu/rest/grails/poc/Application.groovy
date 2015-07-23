@@ -1,4 +1,4 @@
-package mdms.catalog.player
+package br.edu.rest.grails.poc
 
 import grails.boot.GrailsApp
 import grails.boot.config.GrailsAutoConfiguration
