@@ -1,4 +1,5 @@
 .gradle
 .idea
-grails-rest-poc.iml
 build
+out
+grails-rest-poc.iml
