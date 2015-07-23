@@ -1,11 +1,17 @@
 {
     "swagger": "2.0",
     "info": {
-        "version": "0.3.0",
+        "version": "0.3.1",
         "title": "GRAILS REST API POC",
-        "description": "A simpler POC with Grails to generate RESTful Web Services\n"
+        "description": "A simple POC with Grails to generate RESTful Web Services\n"
     },
     "host": "localhost:8080",
+    "tags": [
+        {
+            "name": "Title",
+            "description": "Everything about titles"
+        }
+    ],
     "schemes": [
         "http"
     ],
@@ -20,6 +26,10 @@
     "paths": {
         "/titles": {
             "get": {
+                "tags": [
+                    "Title"
+                ],
+                "summary": "list all titles",
                 "description": "Gets `Title` objects.\n",
                 "responses": {
                     "200": {
@@ -35,6 +45,10 @@
                 }
             },
             "post": {
+                "tags": [
+                    "Title"
+                ],
+                "summary": "Create a new title",
                 "parameters": [
                     {
                         "name": "title",
@@ -55,6 +69,10 @@
         },
         "/titles/{id}": {
             "get": {
+                "tags": [
+                    "Title"
+                ],
+                "summary": "Get a specific title",
                 "description": "Gets `Title` objects.\n",
                 "parameters": [
                     {
@@ -79,6 +97,10 @@
                 }
             },
             "put": {
+                "tags": [
+                    "Title"
+                ],
+                "summary": "Update a specific title",
                 "parameters": [
                     {
                         "name": "id",
@@ -104,6 +126,10 @@
                 }
             },
             "delete": {
+                "tags": [
+                    "Title"
+                ],
+                "summary": "Delete a specific title",
                 "parameters": [
                     {
                         "name": "id",
