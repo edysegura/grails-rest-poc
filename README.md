@@ -11,6 +11,4 @@ If you can't use the default port 8080 you can specify another one as a paramete
 
 As soon as you get the server is up and running, head to [http://localhost:8080](http://localhost:8080). You're going to see Swagger UI with the REST definitions such as image below:
 
-![swagger ui](/docs/swagger-ui.png)
-
 ![Swagger UI](/docs/swagger-ui.png?raw=true "Swagger UI")
